@@ -2,11 +2,12 @@ require 'rails_helper'
 
 describe 'User sees all snacks name and price' do
   scenario 'when they visit machine show page' do
-    machine_name = 'name1'
+    location = 'name1'
     snack_name = 'candy'
     price = 123
-    machine = Machine.create(machine_name)
-    machine.snacks.create(snack_name, price)
+    owner = Owner.create!(name: 'manoj')
+    machine = Machine.create!(owner: owner, location: location)
+    machine.snacks.create!(name: snack_name, price: price)
 
     visit machine_path(machine)
 

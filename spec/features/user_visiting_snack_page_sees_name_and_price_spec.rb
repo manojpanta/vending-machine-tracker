@@ -5,7 +5,6 @@ describe 'User sees all snacks name and price' do
     location = 'name1'
     snack_name = 'candy'
     price = 123.0
-    avg_price = 'avg_price: 123'
     owner = Owner.create!(name: 'manoj')
     machine = Machine.create!(owner: owner, location: location)
     snack = machine.snacks.create!(name: snack_name, price: price)

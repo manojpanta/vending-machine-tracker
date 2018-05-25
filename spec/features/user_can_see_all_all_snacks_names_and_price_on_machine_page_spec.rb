@@ -28,6 +28,6 @@ describe 'User sees all snacks name and price' do
 
     expect(page).to have_content(avg_price)
     expect(page).to have_content(machine.location)
-    expect(page).to have_content(machine.avg_price)
+    expect(page).to have_content(avg_price)
   end
 end
